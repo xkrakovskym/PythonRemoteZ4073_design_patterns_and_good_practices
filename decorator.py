@@ -1,7 +1,4 @@
 from abc import ABC, abstractmethod
-from http.cookiejar import uppercase_escaped_char
-
-from isort.core import process
 
 
 # Component Interface
