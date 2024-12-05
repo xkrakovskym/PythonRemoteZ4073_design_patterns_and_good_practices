@@ -75,7 +75,9 @@ class ChainAuthenticationElement:
 
     def authenticate(self, credentials):
         if self._authentication_handler.authenticate(credentials):
-            print(f"Atuhencticated by {self._authentication_handler.__class__.__name__}")
+            print(
+                f"Atuhencticated by {self._authentication_handler.__class__.__name__}"
+            )
             return True
         elif self._next_element:
             return self._next_element.authenticate(credentials)

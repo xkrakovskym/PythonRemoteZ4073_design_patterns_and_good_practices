@@ -42,5 +42,5 @@ processor = BasicTextProcessor()
 uppercase_processor = UpperCaseDecorator(processor)
 
 prefix_processor = PrefixDecorator(uppercase_processor, "!!!")
-processed_text_prefix =  prefix_processor.process("hello, world")
+processed_text_prefix = prefix_processor.process("hello, world")
 print(processed_text_prefix)

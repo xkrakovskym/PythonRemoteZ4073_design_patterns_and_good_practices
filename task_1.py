@@ -72,13 +72,11 @@ class SalesManager:
     def __init__(self):
         self.sales = []
 
-    def sell_book(self, title, quantity, inventory_manager):        # Dependency Injection
+    def sell_book(self, title, quantity, inventory_manager):  # Dependency Injection
         if inventory_manager.remove_book(title, quantity):
             self.sales.append((title, quantity))
         else:
             print("Book out of stock or not enough quantity.")
-
-
 
 
 inventory_manager = InventoryManager()

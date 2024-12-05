@@ -20,11 +20,13 @@ class Car:
 
 class AbstractCar(Car):
     def __str__(self):
-        return (f"Car: producer='{self.get_producer()}' "
-                f"type='{self.get_type()}' model='{self.get_model_name()}' "
-                f"cylinders='{self.get_cylinders_num()}' "
-                f"engine volume='{self.get_engine_volume()}' "
-                f"trunk size='{self.get_trunk_size()}'")
+        return (
+            f"Car: producer='{self.get_producer()}' "
+            f"type='{self.get_type()}' model='{self.get_model_name()}' "
+            f"cylinders='{self.get_cylinders_num()}' "
+            f"engine volume='{self.get_engine_volume()}' "
+            f"trunk size='{self.get_trunk_size()}'"
+        )
 
 
 class ToyotaCorolla(AbstractCar):
@@ -136,18 +138,20 @@ class FactoryProducerProvider:
         else:
             return None
 
-def main():
-    chosen_producer = input("What car do you want to produce (Toyota = 'T', AudiA4 = 'A'): ")
-    factory_producer = FactoryProducerProvider.create_factory(chosen_producer)
 
+def main():
+    chosen_producer = input(
+        "What car do you want to produce (Toyota = 'T', AudiA4 = 'A'): "
+    )
+    factory_producer = FactoryProducerProvider.create_factory(chosen_producer)
 
     chosen_type = input("What type do you want (Wagon = 'W', Hatchback = 'H'): ")
 
     if factory_producer:
         my_car = None
-        if chosen_type == 'W':
+        if chosen_type == "W":
             my_car = factory_producer.create_wagon()
-        elif chosen_type == 'H':
+        elif chosen_type == "H":
             my_car = factory_producer.create_hatchback()
         print(my_car)
 

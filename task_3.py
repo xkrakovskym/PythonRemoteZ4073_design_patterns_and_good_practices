@@ -13,6 +13,7 @@ Zadání
 
 from copy import deepcopy
 
+
 class Enemy:
     def __init__(self, typ, zivoty, utok):
         self.typ = typ
@@ -24,7 +25,7 @@ class Enemy:
         return f"Typ: {self.typ}, Životy: {self.zivoty}, Útok: {self.utok}, Speciální vlastnosti: {self.specialni_vlastnosti}"
 
     def clone(self):
-        return(deepcopy(self))
+        return deepcopy(self)
 
 
 # Hlavní program

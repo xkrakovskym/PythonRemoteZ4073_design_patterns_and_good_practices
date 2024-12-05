@@ -1,15 +1,15 @@
 class MathOperationApplier:
     def apply(self, math_operation, first, second):
-        if math_operation == '+':
+        if math_operation == "+":
             return first + second
-        elif math_operation == '-':
+        elif math_operation == "-":
             return first - second
-        elif math_operation == '*':
+        elif math_operation == "*":
             return first * second
-        elif math_operation == '/':
+        elif math_operation == "/":
             return first / second
-        elif math_operation == '**':
-            return first ** second
+        elif math_operation == "**":
+            return first**second
         else:
             raise ArithmeticError()
 
@@ -30,8 +30,11 @@ class PythonStyleWithoutOrderMathOperationsInterpreter(Interpreter):
 
         value = float(split_data[0])
         for i in range(1, len(split_data), 2):
-            value = self._math_operation_applier.apply(split_data[i], value, float(split_data[i + 1]))
+            value = self._math_operation_applier.apply(
+                split_data[i], value, float(split_data[i + 1])
+            )
         return value
+
 
 math_operation_applier = MathOperationApplier()
 interpreter = PythonStyleWithoutOrderMathOperationsInterpreter(math_operation_applier)

@@ -54,7 +54,7 @@ class FavouriteAdapter(Student):
         super().__init__(full_name, contact_details, age, grades)
 
 
-favourite1 = Favorite("Michal", "K", "m@k.com", 29,[1,4,3,2])
+favourite1 = Favorite("Michal", "K", "m@k.com", 29, [1, 4, 3, 2])
 
 print(favourite1)
 

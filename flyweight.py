@@ -1,5 +1,6 @@
 import random
 
+
 class Engine:
     instances = 0
 
@@ -18,22 +19,24 @@ class Car:
         self._engine = engine
 
 
-class CarFactory:       # drzime iba 4 objekty na ako class variable
-    engines = [Engine('polo', 1.6, 'DIESEL'),
-               Engine('poloGTI', 2.0, 'GASOLINE'),
-               Engine('golf', 1.5, 'GASOLINE')]
+class CarFactory:  # drzime iba 4 objekty na ako class variable
+    engines = [
+        Engine("polo", 1.6, "DIESEL"),
+        Engine("poloGTI", 2.0, "GASOLINE"),
+        Engine("golf", 1.5, "GASOLINE"),
+    ]
 
     @staticmethod
     def create_vw_polo(vin):
-        return Car('VW', vin, 'Polo', CarFactory.engines[0])
+        return Car("VW", vin, "Polo", CarFactory.engines[0])
 
     @staticmethod
     def create_vw_polo_gti(vin):
-        return Car('VW', vin, 'Polo GTI', CarFactory.engines[1])
+        return Car("VW", vin, "Polo GTI", CarFactory.engines[1])
 
     @staticmethod
     def create_vw_golf(vin):
-        return Car('VW', vin, 'Golf', CarFactory.engines[2])
+        return Car("VW", vin, "Golf", CarFactory.engines[2])
 
 
 def generate_vin():
@@ -54,8 +57,10 @@ def main():
         car_creation_method = car_creation_methods[engine_type]
         produced_cars.append(car_creation_method(vin))
 
-    print(f"I created {len(produced_cars)} cars, but only {Engine.instances} references to Engine objects")
+    print(
+        f"I created {len(produced_cars)} cars, but only {Engine.instances} references to Engine objects"
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

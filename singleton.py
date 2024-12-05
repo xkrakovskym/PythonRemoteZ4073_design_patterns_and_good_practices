@@ -4,7 +4,6 @@ class ConfigSingleton:
     def __init__(self):
         self.value = None
 
-
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(ConfigSingleton, cls).__new__(cls)
@@ -13,7 +12,6 @@ class ConfigSingleton:
         return cls._instance
 
 
-
 config1 = ConfigSingleton()
 config2 = ConfigSingleton()
-print(config1==config2)
+print(config1 == config2)

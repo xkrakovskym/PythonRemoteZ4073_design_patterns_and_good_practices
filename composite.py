@@ -13,7 +13,7 @@ class File(FileSystemComponent):
         self.size = size
 
     def display(self, indent=0):
-        print(" "*indent + f"File: {self.name}, Size: {self.size} bytes")
+        print(" " * indent + f"File: {self.name}, Size: {self.size} bytes")
 
 
 class Directory(FileSystemComponent):
@@ -28,9 +28,10 @@ class Directory(FileSystemComponent):
         self.children.remove(component)
 
     def display(self, indent=0):
-        print(" "*indent + f"Directory: {self.name}")
+        print(" " * indent + f"Directory: {self.name}")
         for child in self.children:
             child.display(indent + 2)
+
 
 file1 = File("file1.txt", 100)
 file2 = File("file2.txt", 2000)

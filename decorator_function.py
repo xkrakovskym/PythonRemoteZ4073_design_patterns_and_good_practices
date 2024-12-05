@@ -11,7 +11,9 @@ def my_decorator(func):
         print("After calling the func")
 
         return result
+
     return wrapper
+
 
 @my_decorator
 def say_hello(name):

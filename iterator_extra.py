@@ -1,29 +1,42 @@
+zoznam = [1, 2, 3, 4, 5, 6, 7]
+
+list_iterator = iter(zoznam)
+list_iterator1 = iter(zoznam)
+# print(next(list_iterator))
+# print(next(list_iterator1))
+
+slovnik = {1: "a", 2: "b", 3: "c"}
+
+slovnik_iterator = iter(slovnik)
+# print(next(slovnik_iterator))
+# print(next(slovnik_iterator))
+
+moj_string = "Hello World"
+
+string_iterator = iter(moj_string)
+print(next(string_iterator))
+print(next(string_iterator))
+
+
 class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
 
     def __repr__(self):
-        return f"Book(title={self.title}, author={self.author})"
+        return self.__dict__
 
 
 class BookCollection:
     def __init__(self):
         self.books = []
+        self.index = 0
 
     def add_book(self, book):
         self.books.append(book)
 
     def __iter__(self):
-        return BookIterator(self.books)
-
-
-class BookIterator:
-    def __init__(self, books):
-        self.books = books
         self.index = 0
-
-    def __iter__(self):
         return self
 
     def __next__(self):
@@ -39,10 +52,13 @@ book1 = Book("The Catcher in the Rye", "J.D. Salinger")
 book2 = Book("To Kill a Mockingbird", "Harper Lee")
 book3 = Book("1984", "George Orwell")
 
-book_collection = BookCollection()
-book_collection.add_book(book1)
-book_collection.add_book(book2)
-book_collection.add_book(book3)
+collection = BookCollection()
+collection.add_book(book1)
+collection.add_book(book2)
+collection.add_book(book3)
 
-for book in book_collection:
-    print(book)
+iter1 = iter(collection)
+iter2 = iter(collection)
+
+# print(next(iter1))
+# print(next(iter2))

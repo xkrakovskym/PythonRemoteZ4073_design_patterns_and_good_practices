@@ -64,4 +64,3 @@ coffe_with_paypal = Coffee(paypal, 3.8)
 tea_with_credit.purchase()
 coffee_with_cash.purchase()
 coffe_with_paypal.purchase()
-

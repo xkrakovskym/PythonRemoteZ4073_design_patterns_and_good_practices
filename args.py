@@ -13,9 +13,11 @@ def cache(fn):
 
     return cacher
 
+
 def add(a, b):
     return a + b
 
+
 add = cache(add)
-print(add(1,2))
-print(add(1,2))
+print(add(1, 2))
+print(add(1, 2))

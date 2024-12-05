@@ -14,6 +14,7 @@ class C(A):
 class D(C, B):
     pass
 
+
 obj = D()
 obj.method()
-#print(D.__mro__)
+# print(D.__mro__)

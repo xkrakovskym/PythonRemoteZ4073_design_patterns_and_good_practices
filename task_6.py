@@ -13,6 +13,7 @@
 	•	Použijte iterátor k iteraci přes zákazníky ve frontě a vypište jejich jména (jakoby byli obslouženi).
 """
 
+
 class CustomerQueue:
     def __init__(self):
         self.customers = []
@@ -62,4 +63,4 @@ try:
         element = next(iterator)
         print(element)
 except StopIteration:
-    pass
+    print("koniec iteracie")

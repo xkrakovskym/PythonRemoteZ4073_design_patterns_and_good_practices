@@ -31,5 +31,6 @@ def main_proxy():
     proxy_image.show()
     proxy_image.show()
 
+
 if __name__ == "__main__":
     main_proxy()

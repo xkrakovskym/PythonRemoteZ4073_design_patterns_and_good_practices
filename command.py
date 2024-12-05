@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Command(ABC):
     @abstractmethod
     def execute(self):
@@ -64,6 +65,7 @@ class TextEditorInvoker:
             command = self.undo_commands.pop()
             command.execute()
             self.commands.append(command)
+
 
 editor = TextEditor()
 invoker = TextEditorInvoker()

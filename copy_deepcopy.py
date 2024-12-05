@@ -10,4 +10,3 @@ original_list[4][1] = 10
 print(original_list)
 print(shallow_copy)
 print(deep_copy)
-

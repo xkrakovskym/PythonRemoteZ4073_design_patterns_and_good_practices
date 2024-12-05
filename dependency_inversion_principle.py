@@ -20,6 +20,7 @@ class ReportGenerator:
 
 from abc import ABC, abstractmethod
 
+
 class DataSource(ABC):
     @abstractmethod
     def connect(self):
@@ -53,8 +54,6 @@ class ReportGenerator:
     def generate(self):
         self.data_source.connect()
         data = self.data_source.fetch_data()
-        return f"Report:\n" + "\n".join([f"{key}: {value}" for key, value in data.items()])
-
-
-
-
+        return f"Report:\n" + "\n".join(
+            [f"{key}: {value}" for key, value in data.items()]
+        )

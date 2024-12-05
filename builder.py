@@ -6,8 +6,10 @@ class Car:
         self.gps = False
 
     def __str__(self):
-        return f"Car with {self.seats} seats, engine type: {self.engine}, " \
-               f"trip computer: {'yes' if self.trip_computer else 'no'}, GPS: {'yes' if self.gps else 'no'}"
+        return (
+            f"Car with {self.seats} seats, engine type: {self.engine}, "
+            f"trip computer: {'yes' if self.trip_computer else 'no'}, GPS: {'yes' if self.gps else 'no'}"
+        )
 
 
 class CarBuilder:

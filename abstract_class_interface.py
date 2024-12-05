@@ -7,6 +7,7 @@ class Animal(ABC):
     podtřídy, která zajišťuje, že implementují metodu `make_sound`.
     Animal má pouze abstraktní metody a teda funguje jako rozhraní.
     """
+
     @abstractmethod
     def make_sound(self):
         pass
@@ -27,6 +28,7 @@ class Dog(Animal, FourLeggedAnimal):
 
     def run(self):
         return "Dog is running..."
+
 
 class Cat(Animal):
     def make_sound(self):
